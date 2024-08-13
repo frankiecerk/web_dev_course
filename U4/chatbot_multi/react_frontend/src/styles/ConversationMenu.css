@@ -1,0 +1,74 @@
+.conversation-menu {
+  padding: 24px;
+  max-width: 24vw;
+  overflow-y: scroll;
+}
+
+.conversation-menu.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.conversation-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+button {
+  font-weight: bold;
+}
+
+.conversation {
+  padding: 8px;
+  margin: 4px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 32px;
+  align-content: center;
+}
+
+.conversation-menu.dark .conversation {
+  background-color: #444;
+}
+
+.conversation-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.conversation-menu.dark .conversation-link {
+  color: #79a9ff;
+}
+
+.conversation-link:hover {
+  color: #0056b3;
+}
+
+.conversation-link .new {
+  color: white important!;
+}
+
+.conversation-loading {
+  text-align: center;
+  font-style: italic;
+  padding: 8px;
+  color: #555;
+}
+
+.conversation-menu.dark .conversation-loading {
+  color: #aaa;
+}
+
+.conversation:hover {
+  background-color: #e1e1e1;
+}
+
+.conversation-menu.dark .conversation:hover {
+  background-color: #555;
+}

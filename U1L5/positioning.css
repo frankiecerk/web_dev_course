@@ -1,0 +1,51 @@
+.square {
+  /* make our squares square */
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+  /*style make the boxes visible*/
+  background-color: green;
+  border: 4px solid red;
+  /*style the text*/
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.static {
+  position: static;
+  top: 10000px; /* This will not move the element */
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.middle {
+  top: 248px;
+}
+
+.lowest {
+  top: 496px;
+}
+
+.container {
+  position: relative;
+  padding: 0px 200px;
+  width: fit-content;
+  border: 1px solid black;
+  left: 256px;
+}
+
+.right {
+  right: 100px;
+}
+
+.left {
+  left: 100px;
+}

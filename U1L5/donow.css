@@ -1,0 +1,12 @@
+p {
+  font-family: cursive;
+  text-align: left;
+}
+h1 {
+  text-align: left;
+  text-decoration: underline;
+}
+body {
+  background-color: aliceblue;
+  border: 1px dashed black;
+}

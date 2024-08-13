@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/global.css" />
+    <link rel="stylesheet" href="static/css/add.css" />
+    <title>Add User</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="static/js/add.js"></script>
+  </head>
+  <body>
+    <h1>Add a New User</h1>
+    <form id="userForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required />
+
+      <label for="hobbies">Hobbies (comma separated):</label>
+      <input type="text" id="hobbies" name="hobbies" required />
+
+      <button type="submit">Add User</button>
+    </form>
+    <a href="/" class="btn">Go Back to Home</a>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+.container {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rect {
+  height: 400px;
+  background-color: green;
+  border: 4px solid red;
+  border-radius: 4px;
+
+  flex-grow: 2;
+}
+
+.big {
+  flex-grow: 4;
+}
+
+.little {
+  flex-grow: 1;
+}

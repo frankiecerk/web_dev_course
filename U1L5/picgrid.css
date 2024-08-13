@@ -1,0 +1,63 @@
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container {
+  padding: 10px;
+  /* hint: we need each column inside the container to be displayed in a single row */
+  /* hint: there should be 8px of space between each column */
+  display: flex;
+  gap: 8px;
+}
+
+.column {
+  flex-basis: 0px;
+  /* hint: each column should be equal in width and as big as possible */
+  /* hint: each column's items should be stacked vertically and flex */
+  /* hint: there should be 8px of space between the pictures in each column */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.square {
+  aspect-ratio: 1 / 1; /* This keeps the square's height and width equal */
+  overflow: hidden; /* This will help crop any pictures that overflow the square div */
+  /* hint: Each square be equal in height and as big as possible */
+  flex-grow: 1;
+
+  /* hint: when you position your paragraph, you will need ot add something here! */
+  position: relative;
+}
+
+.person-picture {
+  /* This tells the picture to take up as much spce in the square as possible */
+  width: 100%;
+  height: 100%;
+  /* This will help crop any pictures that overflow the square div */
+  object-fit: cover;
+}
+
+.person-paragraph {
+  /* Set the appearance of the text in the paragraph */
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  /* this will give it a background that "fades" */
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.25) 10%,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(0, 0, 0, 0.9) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  /* this will make the background stretch across the picture */
+  width: 100%;
+  margin: 0px;
+  /* hint: we need the text to be absolutely positioned 0px up from the bottom of the square */
+  position: absolute;
+  bottom: 0px;
+}

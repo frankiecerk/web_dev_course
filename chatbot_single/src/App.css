@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chat-container {
+  width: 70vw;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.header button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.header button:hover {
+  background-color: #0056b3;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 70vh;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-wrap: break-word;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.message.bot {
+  background-color: #e1e1e1;
+  color: black;
+  align-self: flex-start;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  padding: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-mode .messages {
+  background-color: #f9f9f9;
+}
+
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode .messages {
+  background-color: #444444;
+}
+
+.dark-mode .message.bot {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.dark-mode .message.user {
+  background-color: #007bff;
+}
+
+.dark-mode button {
+  background-color: #007bff;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode input {
+  background-color: #555555;
+  color: white;
+  border: 1px solid #777;
+}

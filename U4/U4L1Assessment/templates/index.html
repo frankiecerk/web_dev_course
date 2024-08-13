@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Names List</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Names</h1>
+      <ul id="names-list">
+        <!-- {% for name in names %}
+        <li>{{ name }}</li>
+        {% endfor %} -->
+      </ul>
+      <input type="text" id="name-input" placeholder="Add name" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="{{ url_for('static', filename='js/index.js') }}"
+      type="module"
+    ></script>
+  </body>
+</html>

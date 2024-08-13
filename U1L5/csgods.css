@@ -1,0 +1,16 @@
+.person-container {
+  background-color: lightblue;
+  padding: 15px;
+  border: 8px double navy;
+  margin: 12px;
+}
+
+.person-paragraph {
+  background-color: oldlace;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  border: 8px solid seagreen;
+}
