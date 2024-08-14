@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/ConversationMenu.css";
 
 export default function ConversationMenu({ darkMode }) {
+  const { conversationId: currentConversationId } = useParams();
   const [conversations, setConversations] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -15,7 +16,7 @@ export default function ConversationMenu({ darkMode }) {
     };
 
     fetchConversations();
-  }, [setLoading, setConversations]);
+  }, [setLoading, setConversations, currentConversationId]);
 
   const navigate = useNavigate();
 
@@ -30,6 +31,14 @@ export default function ConversationMenu({ darkMode }) {
     </button>
   );
 
+  const handleDelete = async (id) => {
+    const response = await axios.delete(`/api/conversation/${id}`);
+    setConversations(response.data);
+    if (id === currentConversationId) {
+      navigate("/");
+    }
+  };
+
   console.log("LOAFIN, loading:", loading);
   return (
     <div className={`conversation-menu ${darkMode ? "dark" : ""}`}>
@@ -37,16 +46,26 @@ export default function ConversationMenu({ darkMode }) {
         {!loading ? (
           <>
             {newConversation}
-            {Object.values(conversations).map((conversation) => (
-              <div key={conversation.id} className="conversation">
-                <Link
-                  to={`/conversation/${conversation.id}`}
-                  className="conversation-link"
-                >
-                  {conversation.messages[0]?.text}
-                </Link>
-              </div>
-            ))}
+            {Object.entries(conversations).map(
+              ([conversationId, conversation]) => (
+                <>
+                  <div key={conversationId} className="conversation">
+                    <Link
+                      to={`/conversation/${conversationId}`}
+                      className="conversation-link"
+                    >
+                      {conversation[0]?.text}
+                    </Link>
+                    <button
+                      className="delete-button"
+                      onClick={() => handleDelete(conversationId)}
+                    >
+                      🗑️
+                    </button>
+                  </div>
+                </>
+              )
+            )}
           </>
         ) : (
           <>

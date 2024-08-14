@@ -27,12 +27,16 @@
   overflow-y: hidden;
 }
 
-.chat-container {
-  flex: 4;
+.conversation-page .chat-container {
+  flex-grow: 10;
+  max-width: 90vw;
+  height: unset;
 }
 
-.conversation-menu {
-  flex: 1;
+.conversation-page .conversation-menu {
+  flex-grow: 1;
+  min-width: 96px;
+  max-width: 128px;
 }
 
 .conversation-page.light-mode {

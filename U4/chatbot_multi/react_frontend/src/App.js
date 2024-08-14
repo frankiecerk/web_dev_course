@@ -8,10 +8,15 @@ const App = () => {
       <Router>
         <Routes>
           <Route
-            path="/conversation/:conversationId"
+            path="conversation/:conversationId"
             element={<ConversationPage />}
           />
           <Route path="/" element={<ConversationPage key="new" />} />
+          {/* <Route
+            path="/conversation/:conversationId"
+            element={<Chatbot darkMode={false} />}
+          />
+          <Route path="/" element={<ConversationMenu darkMode={false} />} /> */}
         </Routes>
       </Router>
     </>

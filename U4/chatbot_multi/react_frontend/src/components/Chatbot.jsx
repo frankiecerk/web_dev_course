@@ -12,16 +12,14 @@ export default function Chatbot({ darkMode }) {
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
-  console.log("CONVERSATIONID:", conversationId);
   useEffect(() => {
     const fetchMessages = async () => {
-      console.log("coversationId:", conversationId);
       const response = await axios.get(`/api/conversation/${conversationId}`);
       if (response.status !== 200) {
         setMessages([]);
         navigate("/");
       } else {
-        setMessages(response.data.messages);
+        setMessages(response.data);
       }
       setLoading(false);
     };
